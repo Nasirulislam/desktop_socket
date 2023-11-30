@@ -1,10 +1,10 @@
 module.exports = (io) => {
     io.on('connection', (socket) => {
 
-        socket.on('enterSalesData', (data) => {
+        socket.on('entersalesData', (data) => {
             console.log('Sales data entered:', data);
-            socket.broadcast.emit('enterSalesData', data);
-            // setInterval(() => { socket.emit("dataRes", { meesage: "Data recieved and response sent" }) }, 1000)
+            socket.broadcast.emit('salesDataChanged', data);
+            // socket.emit('salesDataChanged', data);
         });
 
     });

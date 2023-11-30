@@ -3,7 +3,8 @@ module.exports = (io) => {
   
       socket.on('enterWriteupData', (data) => {
         console.log('Writeup data entered:', data);
-        socket.broadcast.emit('enterWriteupData', data);
+        socket.broadcast.emit('writeupDataChanged', data);
+        // socket.emit('writeupDataChanged', data);
       });
   
     });
