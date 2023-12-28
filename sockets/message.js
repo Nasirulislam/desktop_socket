@@ -3,7 +3,7 @@ module.exports = (io) => {
   
       socket.on('newMessage', (data) => {
         console.log('Received message:', data);
-        socket.broadcast.emit('newMessage', data);
+        socket.broadcast.emit('newMessageRecieved', data);
       });
   
     });
